@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGN UP</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="/lesson1/sign up/signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="LOGIN">
+      <div class="form">
+        <h2>SIGN UP</h2>
+        <div class="formelm">
+          <label for="email">email</label>
+          <input type="email" id="email" placeholder="enter email" />
+        </div>
+        <div class="formelm">
+          <label for="name">user name</label>
+          <input type="text" id="UserName" placeholder="enter user name" />
+        </div>
+        <div class="formelm">
+          <label for="password">password</label>
+          <input type="password" id="password" placeholder="enter password" />
+        </div>
+        <div class="formelm">
+          <label for="password">confirm password</label>
+          <input
+            type="password"
+            id="confirmpassword"
+            placeholder="enter password again"
+          />
+        </div>
+        <div class="formelm">
+          <a class="as" href="/lesson1/sign in/sign in.html"
+            >you have account?</a
+          >
+        </div>
+        <div class="formelm">
+          <button id="btn-signup">sign up</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      $("#btn-signup").click(() => {
+        const getEmailVal = $("#email").val();
+        const getUserNameVal = $("#UserName").val();
+        const Password = $("#password").val();
+        const ComfirmPassword = $("#confirmpassword").val();
+        let getAllUser = localStorage.getItem("users");
+
+        if (getAllUser === null) {
+            getAllUser = [];
+        }
+
+        if (Password === ComfirmPassword) {
+          alert("ok");
+          return;
+        } else {
+          alert("not ok");
+          return;
+        }
+      });
+    </script>
+  </body>
+</html>
