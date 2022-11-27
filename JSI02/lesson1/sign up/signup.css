@@ -70,3 +70,75 @@ body {
 .as {
     color: #ffffff;
 }
+.menu{
+    background-color: #000000;
+    padding-right: 95%;
+    position: fixed;
+    top:  0px;
+
+}
+.logoimg{
+    width: 80px;
+}
+.bottom img {
+    width: 150px;
+    margin-left: 300px;
+}
+
+.bottom {
+    margin-top: 200px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.c1bottom a {
+    text-decoration: none;
+    color: #d4d4d4;
+    font-family: "Kanit", sans-serif;
+}
+
+.c2bottom {
+    border-left: #3b3b3b 1px solid;
+    padding-left: 70px;
+    margin-left: 100px;
+    padding-top: 10px;
+}
+
+.c1bottom a {
+    margin-left: 50px;
+}
+
+.bottom ul {
+    list-style: none;
+}
+
+.c2bottom a,
+.c2bottom p {
+    text-decoration: none;
+    color: #747474;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+}
+
+.abottom {
+    margin-left: 10px;
+}
+
+.abottom a:hover {
+    text-decoration: underline;
+}
+
+.bottom li {
+    margin-bottom: 5px;
+}
+
+.c1bottom a:hover {
+    text-decoration: underline;
+}
+
+.ccbottom a:hover {
+    text-decoration: underline;
+}
+.boxlogin{
+    margin-top: 100px;
+}

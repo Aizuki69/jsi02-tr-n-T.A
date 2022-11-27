@@ -19,39 +19,79 @@
     />
   </head>
   <body>
-    <div class="LOGIN">
-      <div class="form">
-        <h2>SIGN UP</h2>
-        <div class="formelm">
-          <label for="email">email</label>
-          <input type="email" id="email" placeholder="enter email" />
-        </div>
-        <div class="formelm">
-          <label for="name">user name</label>
-          <input type="text" id="UserName" placeholder="enter user name" />
-        </div>
-        <div class="formelm">
-          <label for="password">password</label>
-          <input type="password" id="password" placeholder="enter password" />
-        </div>
-        <div class="formelm">
-          <label for="password">confirm password</label>
-          <input
-            type="password"
-            id="confirmpassword"
-            placeholder="enter password again"
-          />
-        </div>
-        <div class="formelm">
-          <a class="as" href="/lesson1/sign in/sign in.html"
-            >you have account?</a
-          >
-        </div>
-        <div class="formelm">
-          <button id="btn-signup">sign up</button>
+    <div class="boxlogin">
+      <div class="LOGIN">
+        <div class="form">
+          <h2>SIGN UP</h2>
+          <div class="formelm">
+            <label for="email">email</label>
+            <input type="email" id="email" placeholder="enter email" />
+          </div>
+          <div class="formelm">
+            <label for="name">user name</label>
+            <input type="text" id="UserName" placeholder="enter user name" />
+          </div>
+          <div class="formelm">
+            <label for="password">password</label>
+            <input type="password" id="password" placeholder="enter password" />
+          </div>
+          <div class="formelm">
+            <label for="password">confirm password</label>
+            <input
+              type="password"
+              id="confirmpassword"
+              placeholder="enter password again"
+            />
+          </div>
+          <div class="formelm">
+            <a class="as" href="/lesson1/sign in/sign in.html"
+              >you have account?</a
+            >
+          </div>
+          <div class="formelm">
+            <button id="btn-signup">sign up</button>
+          </div>
         </div>
       </div>
     </div>
+    <div class="menu">
+      <img src="/lesson1/assets/logo.PNG" class="logoimg" alt="" />
+    </div>
+    <div id="bottom">
+      <div class="bottom">
+        <div class="c1bottom">
+          <ul>
+            <li>
+              <a href="https://youtube.com/channel/UCqvQWrqyTGx4g80dMPi7Gwg"
+                >YouTube</a
+              >
+            </li>
+            <li>
+              <a href="thongbao.html">Instagram</a>
+            </li>
+            <li>
+              <a href="thongbao.html">Facebook</a>
+            </li>
+            <li>
+              <a href="thongbao.html">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="c2bottom">
+          <a href="">Vietnamese</a>
+          <p>Copyright © HALLOWEEN EVENT</p>
+          <div class="cc2bottom">
+            <a class="abottom" href="thongbao.html">pháp lý</a>
+            <a class="abottom" href="thongbao.html">Riêng tư</a>
+            <a class="abottom" href="thongbao.html">Cookie</a>
+          </div>
+        </div>
+        <div class="imgbottom">
+          <img src="/lesson1/assets/logo.PNG" alt="logo" />
+        </div>
+      </div>
+    </div>
+
     <script>
       $("#btn-signup").click(() => {
         const getEmailVal = $("#email").val();
@@ -61,7 +101,7 @@
         let getAllUser = localStorage.getItem("users");
 
         if (getAllUser === null) {
-            getAllUser = [];
+          getAllUser = [];
         }
 
         if (Password === ComfirmPassword) {
