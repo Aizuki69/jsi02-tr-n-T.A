@@ -11,13 +11,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <link rel="stylesheet" href="/lesson1/sign up/signup.css" />
+    <link rel="stylesheet" href="/JSI02/lesson1/sign up/signup.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body>
     <div class="boxlogin">
       <div class="LOGIN">
@@ -25,7 +26,12 @@
           <h2>SIGN UP</h2>
           <div class="formelm">
             <label for="email">email</label>
-            <input type="email" id="email" placeholder="enter email" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="enter email"
+            />
           </div>
           <div class="formelm">
             <label for="name">user name</label>
@@ -44,7 +50,7 @@
             />
           </div>
           <div class="formelm">
-            <a class="as" href="/lesson1/sign in/sign in.html"
+            <a class="as" href="/JSI02/lesson1/sign in/sign in.html"
               >you have account?</a
             >
           </div>
@@ -55,7 +61,7 @@
       </div>
     </div>
     <div class="menu">
-      <img src="/lesson1/assets/logo.PNG" class="logoimg" alt="" />
+      <img src="/JSI02/lesson1/assets/logo.PNG" class="logoimg" alt="" />
     </div>
     <div id="bottom">
       <div class="bottom">
@@ -79,7 +85,7 @@
         </div>
         <div class="c2bottom">
           <a href="">Vietnamese</a>
-          <p>Copyright © HALLOWEEN EVENT</p>
+          <p>Copyright © BLUE SKY</p>
           <div class="cc2bottom">
             <a class="abottom" href="thongbao.html">pháp lý</a>
             <a class="abottom" href="thongbao.html">Riêng tư</a>
@@ -87,7 +93,7 @@
           </div>
         </div>
         <div class="imgbottom">
-          <img src="/lesson1/assets/logo.PNG" alt="logo" />
+          <img src="/JSI02/lesson1/assets/logo.PNG" alt="logo" />
         </div>
       </div>
     </div>
@@ -98,14 +104,28 @@
         const getUserNameVal = $("#UserName").val();
         const Password = $("#password").val();
         const ComfirmPassword = $("#confirmpassword").val();
-        let getAllUser = localStorage.getItem("users");
+        let getAllUser = JSON.parse(localStorage.getItem("users"));
+    
 
         if (getAllUser === null) {
           getAllUser = [];
+        } else {
+          for (let x = 0; x < getAllUser.length; x++) {
+            if (getAllUser[x].email === getEmailVal) {
+              alert("This email is already linked to another account");
+              return;
+            }
+          }
         }
 
         if (Password === ComfirmPassword) {
-          alert("ok");
+          getAllUser.push({
+            email: getEmailVal,
+            password: Password,
+            username: getUserNameVal,
+          });
+          localStorage.setItem("users", JSON.stringify(getAllUser));
+          alert("Success");
           return;
         } else {
           alert("not ok");

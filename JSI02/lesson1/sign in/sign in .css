@@ -27,7 +27,7 @@ form .formelm {
     font-family: 'Anek Latin', sans-serif;
 }
 
-.LOGIN .form .formelm input[type="text"],
+.LOGIN .form .formelm input[type="email"],
 .LOGIN .form .formelm input[type="password"] {
     margin-top: 5px;
     display: block;
