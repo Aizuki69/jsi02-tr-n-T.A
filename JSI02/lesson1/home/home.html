@@ -1,32 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="/JSI02/lesson1/home/home.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+        referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
-    <h1>hi</h1>
+    <div class="textbox1">
+        <div class="createpost">
+            <h1>Create A Post</h1>
+            <div class="text1">
+                <h2>Title</h2>
+                <input type="text" id="title" class="text" placeholder="say something?" />
+            </div>
+
+
+            <div class="text1">
+                <h2>Description</h2>
+                <input type="text" id="Description" class="text" placeholder="say something?" />
+            </div>
+            <button id="create">CREATE POST</button>
+        </div>
+        <div class="box1">
+            <div class="box">
+                <h1>Card title!</h1>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+            </div>
+            <div class="box">
+                <h1>Card title!</h1>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+            </div>
+            <div class="box">
+                <h1>Card title!</h1>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+            </div>
+        </div>
+        <div id="post"></div>
+    </div>
+
+
+
+
+
+
+
     <script>
-        $( document ).ready(() => {
+        $(document).ready(() => {
             let getAllUser = JSON.parse(localStorage.getItem("user"));
-            if(!getAllUser) {
+            if (!getAllUser) {
                 location.replace("http://127.0.0.1:5500/JSI02/lesson1/sign%20up/sign%20up.html")
             }
+        });
+
+        $("#create").click(() => {
+            var Title = $("#title").val();
+            var Description = $("#Description").val();
+            $(`<div class="box">
+                <h1>${Title}</h1>
+                <p>${Description}</p>
+            </div>`).appendTo("#post")
         })
     </script>
+    <div class="menu">
+        <img src="/JSI02/lesson1/assets/logo.PNG" class="logoimg" alt="" />
+    </div>
+    <div id="bottom">
+        <div class="bottom">
+            <div class="c1bottom">
+                <ul>
+                    <li>
+                        <a href="https://youtube.com/channel/UCqvQWrqyTGx4g80dMPi7Gwg">YouTube</a>
+                    </li>
+                    <li>
+                        <a href="thongbao.html">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="thongbao.html">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="thongbao.html">Twitter</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="c2bottom">
+                <a href="">Vietnamese</a>
+                <p>Copyright © HALLOWEEN EVENT</p>
+                <div class="cc2bottom">
+                    <a class="abottom" href="thongbao.html">pháp lý</a>
+                    <a class="abottom" href="thongbao.html">Riêng tư</a>
+                    <a class="abottom" href="thongbao.html">Cookie</a>
+                </div>
+            </div>
+            <div class="imgbottom">
+                <img src="/JSI02/lesson1/assets/logo.PNG" alt="logo" />
 </body>
+
 </html>
