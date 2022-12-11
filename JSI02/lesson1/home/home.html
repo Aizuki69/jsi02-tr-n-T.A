@@ -56,21 +56,40 @@
 
 
     <script>
+    
         $(document).ready(() => {
             let getAllUser = JSON.parse(localStorage.getItem("user"));
             if (!getAllUser) {
                 location.replace("http://127.0.0.1:5500/JSI02/lesson1/sign%20up/sign%20up.html")
             }
+             let getPost = JSON.parse(localStorage.getItem("post"));
+        $.map(getPost,(val,index) =>{
+          return   $(`
+        <div class="box" id=${index}>
+        <h1>${val.Title}</h1>
+       <p>${val.Description}</p>
+      </div>`).appendTo("#post");
+        })
+           
         });
-
+        
         $("#create").click(() => {
             var Title = $("#title").val();
             var Description = $("#Description").val();
+            console.log(Description)
+            console.log(Title) 
+            let getPost = JSON.parse(localStorage.getItem("post"));
+            if(getPost == null) {
+                getPost = [];
+            }
+            getPost.push({ title: Title, description: Description });
+            localStorage.setItem("post",JSON.stringify(getPost));
             $(`<div class="box">
                 <h1>${Title}</h1>
                 <p>${Description}</p>
-            </div>`).appendTo("#post")
-        })
+            </div>`).appendTo("#post");
+            return; 
+        });
     </script>
     <div class="menu">
         <img src="/JSI02/lesson1/assets/logo.PNG" class="logoimg" alt="" />
