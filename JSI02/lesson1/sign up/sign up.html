@@ -97,8 +97,9 @@
         </div>
       </div>
     </div>
+    
 
-    <script>
+    <!-- <script>
       $("#btn-signup").click(() => {
         const getEmailVal = $("#email").val();
         const getUserNameVal = $("#UserName").val();
@@ -130,6 +131,62 @@
         } else {
           alert("not ok");
           return;
+        }
+      });
+    </script> -->
+     <script type="module">
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword
+      } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+       apiKey: "AIzaSyARiZ41z59GSrMyLvin4lJl7RRtmG8Scl8",
+    authDomain: "login-beta-53173.firebaseapp.com",
+    projectId: "login-beta-53173",
+    storageBucket: "login-beta-53173.appspot.com",
+    messagingSenderId: "433739506090",
+    appId: "1:433739506090:web:cf5e53eaff73305eb34bd3",
+    measurementId: "G-G1ESR563C5"
+      };
+      const app = initializeApp(firebaseConfig);
+
+      $("#btn-signup").click(() => {
+        const getUsernameVal = $("#UserName").val();
+        const getEmailVal = $("#email").val();
+        const password = $("#password").val();
+        const confirmPassword = $("#confirmpassword").val();
+        const auth = getAuth();
+        console.log(getEmailVal,password)
+        createUserWithEmailAndPassword(auth, getEmailVal, password)
+          .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            alert("Success")
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+          });
+      });
+      // Initialize Firebase
+
+      // Initialize Firebase
+
+      $(document).ready(() => {
+        // get current user from local storage ? do not thing : redirect sign up
+        let getAllUser = JSON.parse(localStorage.getItem("user"));
+        if (getAllUser) {
+          location.replace("./home.html");
         }
       });
     </script>

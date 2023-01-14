@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +14,6 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
-
 <body>
     <div class="textbox1">
         <div class="createpost">
@@ -24,8 +22,7 @@
                 <h2>Title</h2>
                 <input type="text" id="title" class="text" placeholder="say something?" />
             </div>
-
-
+            
             <div class="text1">
                 <h2>Description</h2>
                 <input type="text" id="Description" class="text" placeholder="say something?" />
@@ -37,42 +34,20 @@
                 <h1>Card title!</h1>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
             </div>
-            <div class="box">
-                <h1>Card title!</h1>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-            </div>
-            <div class="box">
-                <h1>Card title!</h1>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-            </div>
-        </div>
         <div id="post"></div>
     </div>
-
-
-
-
-
-
-
     <script>
-    
+
         $(document).ready(() => {
             let getAllUser = JSON.parse(localStorage.getItem("user"));
-            if (!getAllUser) {
-                location.replace("http://127.0.0.1:5500/JSI02/lesson1/sign%20up/sign%20up.html")
-            }
-             let getPost = JSON.parse(localStorage.getItem("post"));
-        $.map(getPost,(val,index) =>{
-          return   $(`
+ $(`
         <div class="box" id=${index}>
         <h1>${val.Title}</h1>
        <p>${val.Description}</p>
       </div>`).appendTo("#post");
-        })
-           
         });
         
+
         $("#create").click(() => {
             var Title = $("#title").val();
             var Description = $("#Description").val();
@@ -88,8 +63,28 @@
                 <h1>${Title}</h1>
                 <p>${Description}</p>
             </div>`).appendTo("#post");
-            return; 
+            return;
         });
+    </script>
+        <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyARiZ41z59GSrMyLvin4lJl7RRtmG8Scl8",
+    authDomain: "login-beta-53173.firebaseapp.com",
+    projectId: "login-beta-53173",
+    storageBucket: "login-beta-53173.appspot.com",
+    messagingSenderId: "433739506090",
+    appId: "1:433739506090:web:cf5e53eaff73305eb34bd3",
+    measurementId: "G-G1ESR563C5"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
     </script>
     <div class="menu">
         <img src="/JSI02/lesson1/assets/logo.PNG" class="logoimg" alt="" />

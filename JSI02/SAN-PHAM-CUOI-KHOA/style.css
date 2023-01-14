@@ -1,0 +1,184 @@
+h1 {
+    color: rgb(255, 217, 0);
+
+}
+
+body {
+    margin: 0px;
+    padding-left: 0px;
+
+    background-color: #b12222;
+}
+
+.menu {
+    background-color: #ffbb00;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background: rgba(255, 184, 0, 0.45);
+        box-shadow: 0 8px 32px 0 rgba(135, 99, 31, 0.37);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+}
+
+.logoimg {
+    width: 80px;
+}
+
+.bottom img {
+    width: 150px;
+    margin-left: 300px;
+}
+
+.bottom {
+    background: rgba(255, 184, 0, 0.45);
+        box-shadow: 0 8px 32px 0 rgba(135, 99, 31, 0.37);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    padding: 50px;
+    width: 100%;
+}
+
+.c1bottom a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Kanit", sans-serif;
+}
+
+.c2bottom {
+    border-left: #ffffff 1px solid;
+    padding-left: 70px;
+    margin-left: 100px;
+    padding-top: 10px;
+}
+
+.c1bottom a {
+    margin-left: 50px;
+}
+
+.bottom ul {
+    list-style: none;
+}
+
+.c2bottom a,
+.c2bottom p {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+}
+
+.abottom {
+    margin-left: 10px;
+}
+
+.abottom a:hover {
+    text-decoration: underline;
+}
+
+.bottom li {
+    margin-bottom: 5px;
+}
+
+.c1bottom a:hover {
+    text-decoration: underline;
+}
+
+.ccbottom a:hover {
+    text-decoration: underline;
+}
+/* sign up */
+.boxlogin{
+    margin-top: 150px;
+    margin-bottom: 200px;
+    margin-left: -400px;
+}
+.LOGIN {
+    background: rgba(255, 208, 0, 0.45);
+        box-shadow: 0 8px 32px 0 rgba(135, 99, 31, 0.37);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 300px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    padding-right: 50px;
+}
+
+.LOGIN .form h2 {
+    text-align: center;
+    color: #ffffff;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+    font-family: 'Anek Latin', sans-serif;
+}
+
+.LOGIN,
+form .formelm {
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.LOGIN .form .formelm label {
+    font-size: 14px;
+    color: #000000;
+    font-family: 'Anek Latin', sans-serif;
+}
+
+.LOGIN .form .formelm input[type="email"],
+.LOGIN .form .formelm input[type="text"],
+.LOGIN .form .formelm input[type="password"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    background-color: #ffffff;
+
+}
+
+.LOGIN .form .formelm input[type="checkbox"] {
+    margin-right: 5px;
+
+}
+
+.LOGIN .form .formelm button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #ffbb00;
+    color: #161616;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.formelm {
+    margin-bottom: 20px;
+}
+.as {
+    color: #ffffff;
+}
+/* other */
+.box{
+    width: 300px;
+    position: absolute;
+    top: 10px;
+    left: -115px;
+    padding: 50px;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.45);
+        box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+}
